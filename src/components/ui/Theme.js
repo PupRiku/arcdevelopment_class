@@ -33,13 +33,13 @@ export default createMuiTheme({
     h2: {
       fontFamily: 'Raleway',
       fontWeight: 700,
-      fonttSize: '2.5rem',
+      fontSize: '2.5rem',
       color: arcBlue,
       lineHeight: 1.5,
     },
     h3: {
       fontFamily: 'Pacifico',
-      fonttSize: '2.5rem',
+      fontSize: '2.5rem',
       color: arcBlue,
     },
     h4: {
