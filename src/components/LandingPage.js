@@ -220,7 +220,10 @@ export default function LandingPage(props) {
               to="/customsoftware"
               variant="outlined"
               className={classes.learnButton}
-              onClick={() => {props.setValue(1); props.setSelectedIndex(1)}}
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(1);
+              }}
             >
               <span style={{ marginRight: 10 }}>Learn More</span>
               <ButtonArrow
@@ -262,7 +265,10 @@ export default function LandingPage(props) {
               to="/mobileapps"
               variant="outlined"
               className={classes.learnButton}
-              onClick={() => {props.setValue(1); props.setSelectedIndex(2)}}
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(2);
+              }}
             >
               <span style={{ marginRight: 10 }}>Learn More</span>
               <ButtonArrow
@@ -309,7 +315,10 @@ export default function LandingPage(props) {
               to="/websites"
               variant="outlined"
               className={classes.learnButton}
-              onClick={() => {props.setValue(1); props.setSelectedIndex(3)}}
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(3);
+              }}
             >
               <span style={{ marginRight: 10 }}>Learn More</span>
               <ButtonArrow
@@ -383,12 +392,12 @@ export default function LandingPage(props) {
           style={{ height: '80em' }}
           direction="row"
           alignItems="center"
+          className={classes.infoBackground}
         >
           <Grid
             item
             container
             style={{
-              position: 'absolute',
               textAlign: matchesXS ? 'center' : 'inherit',
             }}
             direction={matchesXS ? 'column' : 'row'}
@@ -453,7 +462,6 @@ export default function LandingPage(props) {
               </Grid>
             </Grid>
           </Grid>
-          <div className={classes.infoBackground} />
         </Grid>
       </Grid>
       <Grid item>
