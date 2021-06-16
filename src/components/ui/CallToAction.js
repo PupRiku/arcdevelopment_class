@@ -23,11 +23,13 @@ const useStyles = makeStyles((theme) => ({
     backgroundImage: `url(${background})`,
     backgroundPosition: 'center',
     backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
     backgroundRepeat: 'no-repeat',
     height: '60em',
     width: '100%',
     [theme.breakpoints.down('md')]: {
       backgroundImage: `url(${mobileBackground})`,
+      backgroundAttachment: 'inherit',
     },
   },
   estimateButton: {
