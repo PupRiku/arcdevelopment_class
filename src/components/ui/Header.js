@@ -209,6 +209,16 @@ export default function Header(props) {
           break;
       }
     });
+    window.onpopstate = (e) => {
+      [...menuOptions, ...routes].forEach((route) => {
+        if (window.location.pathname === route.link) {
+          props.setValue(route.activeIndex);
+          if (route.selectedIndex !== null) {
+            props.setSelectedIndex(route.selectedIndex);
+          }
+        }
+      });
+    };
   }, [props.value, props.selectedIndex, menuOptions, routes, props]);
 
   const tabs = (
