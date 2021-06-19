@@ -12,6 +12,7 @@ import forwardArrow from '../assets/forwardArrow.svg';
 import lightbulb from '../assets/bulb.svg';
 import cash from '../assets/cash.svg';
 import stopwatch from '../assets/stopwatch.svg';
+import roots from '../assets/root.svg';
 
 import documentsAnimation from '../animations/documentsAnimation/data';
 import scaleAnimation from '../animations/scaleAnimation/data.json';
@@ -219,7 +220,31 @@ export default function CustomSoftware(props) {
           </Grid>
         </Grid>
       </Grid>
-      
+      <Grid item container direction="row">
+        <Grid item container direction="column" alignItems="center">
+          <Grid item>
+            <img
+              src={roots}
+              alt="tree with roots extending out"
+              height="450em"
+              width="450em"
+            />
+          </Grid>
+          <Grid item className={classes.itemContainer}>
+            <Typography variant="h4" align="center" gutterBottom>
+              Root-Cause Analysis
+            </Typography>
+            <Typography variant="body1" align="center" paragraph>
+              Many problems are merely symptoms of larger, underlying issues.
+            </Typography>
+            <Typography variant="body1" align="center" paragraph>
+              We can help you thoroughly examine all areas of your business to
+              develop a holistic plan for the most effective implementation of
+              technology.
+            </Typography>
+          </Grid>
+        </Grid>
+      </Grid>
     </Grid>
   );
 }
