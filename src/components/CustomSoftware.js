@@ -9,6 +9,9 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 import backArrow from '../assets/backArrow.svg';
 import forwardArrow from '../assets/forwardArrow.svg';
+import lightbulb from '../assets/bulb.svg';
+import cash from '../assets/cash.svg';
+import stopwatch from '../assets/stopwatch.svg';
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -85,6 +88,59 @@ export default function CustomSoftware(props) {
               alt="Forward to iOS/Android App Development page"
             />
           </IconButton>
+        </Grid>
+      </Grid>
+      <Grid
+        item
+        container
+        direction="row"
+        justify="center"
+        style={{ marginTop: '15em', marginBottom: '20em' }}
+      >
+        <Grid
+          item
+          container
+          direction="column"
+          md
+          alignItems="center"
+          style={{ maxWidth: '40em' }}
+        >
+          <Grid item>
+            <Typography variant="h4">Save Energy</Typography>
+          </Grid>
+          <Grid item>
+            <img src={lightbulb} alt="lightbulb" />
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          container
+          direction="column"
+          md
+          alignItems="center"
+          style={{ maxWidth: '40em' }}
+        >
+          <Grid item>
+            <Typography variant="h4">Save Time</Typography>
+          </Grid>
+          <Grid item>
+            <img src={stopwatch} alt="stopwatch" />
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          container
+          direction="column"
+          md
+          alignItems="center"
+          style={{ maxWidth: '40em' }}
+        >
+          <Grid item>
+            <Typography variant="h4">Save Money</Typography>
+          </Grid>
+          <Grid item>
+            <img src={cash} alt="cash" />
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
