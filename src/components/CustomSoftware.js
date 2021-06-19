@@ -167,8 +167,8 @@ export default function CustomSoftware(props) {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item container direction="row">
-        <Grid item container className={classes.itemContainer}>
+      <Grid item container direction="row" justify="space-between">
+        <Grid item container className={classes.itemContainer} md>
           <Grid item container direction="column" md>
             <Grid item>
               <Typography variant="h4">Digital Documents & Data</Typography>
@@ -196,7 +196,7 @@ export default function CustomSoftware(props) {
             />
           </Grid>
         </Grid>
-        <Grid item container className={classes.itemContainer}>
+        <Grid item container className={classes.itemContainer} md>
           <Grid item md>
             <Lottie
               options={scaleOptions}
@@ -205,10 +205,12 @@ export default function CustomSoftware(props) {
           </Grid>
           <Grid item container direction="column" md>
             <Grid item>
-              <Typography variant="h4" align='right'>Scale</Typography>
+              <Typography variant="h4" align="right">
+                Scale
+              </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="body1" align='right' paragraph>
+              <Typography variant="body1" align="right" paragraph>
                 Whether you’re a large brand, just getting started, or taking
                 off right now, our application architecture ensures pain-free
                 growth and reliability.
@@ -217,6 +219,7 @@ export default function CustomSoftware(props) {
           </Grid>
         </Grid>
       </Grid>
+      
     </Grid>
   );
 }
