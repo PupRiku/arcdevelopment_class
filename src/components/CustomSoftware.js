@@ -10,20 +10,42 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import backArrow from '../assets/backArrow.svg';
 import forwardArrow from '../assets/forwardArrow.svg';
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  heading: {
+    maxWidth: '40em',
+  },
+  arrowContainer: {
+    marginTop: '0.5em',
+  },
+  mainContainer: {
+    paddingLeft: '5em',
+    paddingRight: '5em',
+    paddingTop: '2em',
+    paddingBottom: '10em',
+  },
+}));
 
-export default function CustomSoftware() {
+export default function CustomSoftware(props) {
   const classes = useStyles();
 
   return (
-    <Grid container direction="column">
+    <Grid container direction="column" className={classes.mainContainer}>
       <Grid item container direction="row">
-        <Grid item>
-          <IconButton>
+        <Grid
+          item
+          className={classes.arrowContainer}
+          style={{ marginRight: '1em', marginLeft: '-3.5em' }}
+        >
+          <IconButton
+            style={{ backgroundColor: 'transparent' }}
+            component={Link}
+            to="/services"
+            onClick={() => props.setSelectedIndex(0)}
+          >
             <img src={backArrow} alt="Back to Services Page" />
           </IconButton>
         </Grid>
-        <Grid item container direction="column">
+        <Grid item container direction="column" className={classes.heading}>
           <Grid item>
             <Typography variant="h2">Custom Software Development</Typography>
           </Grid>
@@ -51,10 +73,18 @@ export default function CustomSoftware() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid item>
-            <IconButton>
-                <img src={forwardArrow} alt='Forward to iOS/Android App Development page' />
-            </IconButton>
+        <Grid item className={classes.arrowContainer}>
+          <IconButton
+            style={{ backgroundColor: 'transparent' }}
+            component={Link}
+            to="/mobileapps"
+            onClick={() => props.setSelectedIndex(2)}
+          >
+            <img
+              src={forwardArrow}
+              alt="Forward to iOS/Android App Development page"
+            />
+          </IconButton>
         </Grid>
       </Grid>
     </Grid>
