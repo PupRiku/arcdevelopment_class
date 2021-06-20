@@ -54,6 +54,7 @@ export default function CustomSoftware(props) {
         direction="row"
         alignItems="center"
         className={classes.rowContainer}
+        style={{ marginTop: '5em' }}
       >
         <Grid item lg>
           <img
@@ -107,6 +108,7 @@ export default function CustomSoftware(props) {
         direction="row"
         alignItems="center"
         className={classes.rowContainer}
+        style={{ marginTop: '10em', marginBottom: '10em' }}
       >
         <Grid item container direction="column" lg style={{ maxWidth: '40em' }}>
           <Grid item>
@@ -238,57 +240,7 @@ export default function CustomSoftware(props) {
         container
         direction="row"
         className={classes.rowContainer}
-        style={{ backgroundColor: '#b3b3b3', height: '90em' }}
-      >
-        <Grid item container direction="column" lg>
-          <Grid item>
-            <Typography
-              variant="h4"
-              gutterBottom
-              style={{ color: '#000', marginTop: '5em' }}
-            >
-              Mockup
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography
-              variant="body1"
-              style={{ color: '#fff', maxWidth: '20em' }}
-              paragraph
-            >
-              After we settle on the best path forward and decide on a solution
-              to pursue, details like the cost and timeline will be finalized.
-            </Typography>
-            <Typography
-              variant="body1"
-              style={{ color: '#fff', maxWidth: '20em' }}
-              paragraph
-            >
-              Then it’s time for us to start on your minimum viable product.
-              That’s just a fancy term for a mockup, which doesn’t include
-              colors, images, or any other polished design elements, but
-              captures the essential layout structure and functionality.
-            </Typography>
-            <Typography
-              variant="body1"
-              style={{ color: '#fff', maxWidth: '20em' }}
-              paragraph
-            >
-              This helps us understand and refine the solution itself before
-              getting distracted by specifics and looks.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Grid item lg style={{ alignSelf: 'center' }}>
-          <img src={mockup} alt="basic website design outline" />
-        </Grid>
-      </Grid>
-      <Grid
-        item
-        container
-        direction="row"
-        className={classes.rowContainer}
-        style={{ backgroundColor: '#ff7373', height: '90em' }}
+        style={{ backgroundColor: '#FF7473', height: '90em' }}
       >
         <Grid item container direction="column" lg>
           <Grid item>
