@@ -10,6 +10,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Snackbar from '@material-ui/core/Snackbar';
 
 import ButtonArrow from './ui/ButtonArrow';
 
@@ -100,6 +101,12 @@ export default function Contact(props) {
 
   const [loading, setLoading] = useState(false);
 
+  const [alert, setAlert] = useState({
+    open: false,
+    message: '',
+    backgroundColor: '',
+  });
+
   const onChange = (event) => {
     let valid;
 
@@ -147,9 +154,19 @@ export default function Contact(props) {
         setEmail('');
         setPhone('');
         setMessage('');
+        setAlert({
+          open: true,
+          message: 'Message sent successfully!',
+          backgroundColor: '#4bb543',
+        });
       })
       .catch((err) => {
         setLoading(false);
+        setAlert({
+          open: true,
+          message: 'Something went wrong, please try again!',
+          backgroundColor: '#ff3232',
+        });
       });
   };
 
@@ -422,6 +439,14 @@ export default function Contact(props) {
           </Grid>
         </DialogContent>
       </Dialog>
+      <Snackbar
+        open={alert.open}
+        message={alert.message}
+        ContentProps={{ style: { backgroundColor: alert.backgroundColor } }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        onClose={() => setAlert({ ...alert, open: false })}
+        autoHideDuration={4000}
+      />
       <Grid
         item
         container
