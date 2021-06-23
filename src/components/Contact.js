@@ -145,7 +145,15 @@ export default function Contact(props) {
 
     axios
       .get(
-        'https://us-central1-material-ui-course-8e786.cloudfunctions.net/sendMail'
+        'https://us-central1-material-ui-course-8e786.cloudfunctions.net/sendMail',
+        {
+          params: {
+            name: name,
+            email: email,
+            phone: phone,
+            message: message,
+          },
+        }
       )
       .then((res) => {
         setLoading(false);
