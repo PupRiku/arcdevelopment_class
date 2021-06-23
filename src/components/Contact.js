@@ -136,28 +136,27 @@ export default function Contact(props) {
   const onConfirm = () => {
     setLoading(true);
 
-    axios.get("https://us-central1-material-ui-course-8e786.cloudfunctions.net/sendMail")
-      .then(res => {
+    axios
+      .get(
+        'https://us-central1-material-ui-course-8e786.cloudfunctions.net/sendMail'
+      )
+      .then((res) => {
         setLoading(false);
         setOpen(false);
-        setName("");
-        setEmail("");
-        setPhone("");
-        setMessage("");
+        setName('');
+        setEmail('');
+        setPhone('');
+        setMessage('');
       })
-      .catch(err => {
+      .catch((err) => {
         setLoading(false);
       });
-  }
+  };
 
   const buttonContents = (
     <React.Fragment>
       Send Message
-      <img
-        src={airplane}
-        alt="paper airplane"
-        style={{ marginLeft: '1em' }}
-      />
+      <img src={airplane} alt="paper airplane" style={{ marginLeft: '1em' }} />
     </React.Fragment>
   );
 
