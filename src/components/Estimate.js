@@ -492,10 +492,10 @@ export default function Estimate() {
         )
         .map((question) =>
           question.options.filter((option) => option.selected)
-        )[0][0].cost;
-
-      cost -= userCost;
-      cost *= userCost;
+        )[0][0];
+      setUsers(userCost.title);
+      cost -= userCost.cost;
+      cost *= userCost.cost;
     }
 
     setTotal(cost);
@@ -533,6 +533,22 @@ export default function Estimate() {
           option.map((feature) => newFeatures.push(feature.title))
         );
       setFeatures(newFeatures);
+    }
+  };
+
+  const getCustomFeatures = () => {
+    if (questions.length > 2) {
+      const newCustomFeatures = questions
+        .filter(
+          (question) =>
+            question.title ===
+            'What type of custom features do you expect to need?'
+        )
+        .map((question) =>
+          question.options.filter((option) => option.selected)
+        )[0][0].title;
+
+      setCustomFeatures(newCustomFeatures);
     }
   };
 
@@ -667,6 +683,7 @@ export default function Estimate() {
               getTotal();
               getPlatforms();
               getFeatures();
+              getCustomFeatures();
             }}
           >
             Get Estimate
@@ -823,7 +840,9 @@ export default function Estimate() {
                     </Grid>
                     <Grid item>
                       <Typography variant="body1">
-                        Third options check
+                        The custom features will be of{' '}
+                        {customFeatures.toLowerCase()}
+                        {`, and the project will be used by about ${users} users.`}
                       </Typography>
                     </Grid>
                   </Grid>
