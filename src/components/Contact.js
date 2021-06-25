@@ -335,7 +335,7 @@ export default function Contact(props) {
       <Dialog
         style={{ zIndex: 1302 }}
         open={open}
-        fullScreen={matchesXS}
+        fullScreen={matchesSM}
         onClose={() => setOpen(false)}
         PaperProps={{
           style: {
@@ -346,15 +346,15 @@ export default function Contact(props) {
               : matchesSM
               ? '5em'
               : matchesMD
-              ? '10em'
-              : '20em',
+              ? '15em'
+              : '25em',
             paddingRight: matchesXS
               ? 0
               : matchesSM
               ? '5em'
               : matchesMD
-              ? '10em'
-              : '20em',
+              ? '15em'
+              : '25em',
           },
         }}
       >
