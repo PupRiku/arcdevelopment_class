@@ -303,6 +303,7 @@ export default function Contact(props) {
                 className={classes.message}
                 value={message}
                 multiline
+                placeholder="Tell us more about your project."
                 rows={10}
                 onChange={(event) => setMessage(event.target.value)}
               />
@@ -400,6 +401,7 @@ export default function Contact(props) {
               className={classes.message}
               value={message}
               multiline
+              placeholder="Tell us more about your project."
               rows={10}
               onChange={(event) => setMessage(event.target.value)}
             />
@@ -506,7 +508,7 @@ export default function Contact(props) {
             to="/estimate"
             variant="contained"
             className={classes.estimateButton}
-            onClick={() => props.setValue(5)}
+            onClick={() => props.setValue(false)}
           >
             Free Estimate
           </Button>

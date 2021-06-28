@@ -163,7 +163,7 @@ export default function LandingPage(props) {
                   to="/estimate"
                   className={classes.estimateButton}
                   variant="contained"
-                  onClick={() => props.setValue(5)}
+                  onClick={() => props.setValue(false)}
                 >
                   Free Estimate
                 </Button>

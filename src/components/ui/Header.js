@@ -203,7 +203,7 @@ export default function Header(props) {
           }
           break;
         case '/estimate':
-          props.setValue(5);
+          props.setValue(false);
           break;
         default:
           break;
@@ -248,7 +248,7 @@ export default function Header(props) {
         variant="contained"
         color="secondary"
         className={classes.button}
-        onClick={() => props.setValue(5)}
+        onClick={() => props.setValue(false)}
       >
         Free Estimate
       </Button>
@@ -321,13 +321,13 @@ export default function Header(props) {
             }}
             onClick={() => {
               setOpenDrawer(false);
-              props.setValue(5);
+              props.setValue(false);
             }}
             divider
             button
             component={Link}
             to="/estimate"
-            selected={props.value === 5}
+            selected={props.value === false}
           >
             <ListItemText className={classes.drawerItem} disableTypography>
               Free Estimate

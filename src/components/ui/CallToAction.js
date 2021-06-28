@@ -107,7 +107,7 @@ export default function CallToAction(props) {
           to="/estimate"
           variant="contained"
           className={classes.estimateButton}
-          onClick={() => props.setValue(5)}
+          onClick={() => props.setValue(false)}
         >
           Free Estimate
         </Button>

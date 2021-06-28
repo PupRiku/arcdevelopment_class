@@ -843,12 +843,13 @@ export default function Estimate() {
                 </Typography>
               </Grid>
               <Grid item container>
-                {question.options.map((option) => (
+                {question.options.map((option, index) => (
                   <Grid
                     item
                     container
                     direction="column"
                     md
+                    key={index}
                     component={Button}
                     onClick={() => handleSelect(option.id)}
                     style={{
@@ -1004,6 +1005,7 @@ export default function Estimate() {
                   className={classes.message}
                   value={message}
                   multiline
+                  placeholder="Tell us more about your project."
                   rows={10}
                   onChange={(event) => setMessage(event.target.value)}
                 />
@@ -1013,6 +1015,7 @@ export default function Estimate() {
                   variant="body1"
                   paragraph
                   align={matchesSM ? 'center' : undefined}
+                  style={{ lineHeight: 1.25 }}
                 >
                   We can create this custom digital solution for an estimated{' '}
                   <span className={classes.specialText}>
@@ -1048,6 +1051,14 @@ export default function Estimate() {
                   variant="contained"
                   className={classes.estimateButton}
                   onClick={sendEstimate}
+                  disabled={
+                    name.length === 0 ||
+                    message.length === 0 ||
+                    phone.length === 0 ||
+                    phoneHelper.length !== 0 ||
+                    email.length === 0 ||
+                    emailHelper.length !== 0
+                  }
                 >
                   {loading ? (
                     <CircularProgress />
